@@ -1,0 +1,153 @@
+aid: synthesia
+name: Synthesia
+description: >-
+  Synthesia is the leading enterprise AI video platform for creating
+  studio-quality videos from text using lifelike AI avatars and voices.
+  Customers use Synthesia to produce training, learning and development,
+  customer onboarding, marketing, and internal communications videos in
+  140+ languages without cameras, actors, or studios. The company sells
+  tiered SaaS plans (Basic, Starter, Creator, Enterprise) with API access
+  starting at the Creator tier and full programmatic capabilities for
+  enterprise customers. The Synthesia API lets teams generate, translate,
+  and dub videos at scale and embed video generation into their own
+  applications.
+type: Index
+position: Provider
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Artificial Intelligence
+  - Generative AI
+  - Video
+  - Avatars
+  - Text To Video
+  - Voices
+  - Dubbing
+  - Translation
+  - Templates
+  - Enterprise
+  - Learning
+url: https://raw.githubusercontent.com/api-evangelist/synthesia/refs/heads/main/apis.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.20'
+apis:
+  - aid: synthesia:synthesia-api
+    name: Synthesia API
+    description: >-
+      The Synthesia REST API enables programmatic creation of avatar videos
+      from scripts and templates, with endpoints for videos, templates,
+      avatars, voices, assets, dubbing projects, translations, audit logs,
+      and webhooks. It is designed for high-volume, personalized, and
+      multilingual video production workflows.
+    humanURL: https://docs.synthesia.io/
+    baseURL: https://api.synthesia.io/v2
+    tags:
+      - Video
+      - Avatars
+      - Templates
+      - Dubbing
+      - Translation
+      - Webhooks
+    properties:
+      - type: Documentation
+        url: https://docs.synthesia.io/
+      - type: GettingStarted
+        url: https://docs.synthesia.io/docs/getting-started
+      - type: SignUp
+        url: https://www.synthesia.io/signup
+      - type: API
+        url: https://docs.synthesia.io/reference
+      - type: OpenAPI
+        url: https://docs.synthesia.io/llms.txt
+      - type: Pricing
+        url: https://www.synthesia.io/pricing
+      - type: Authentication
+        url: https://docs.synthesia.io/reference/authentication
+    features:
+      - name: Video Creation
+        description: >-
+          Generate avatar videos from scripts with configurable backgrounds,
+          layouts, and avatars.
+      - name: Templates
+        description: >-
+          Create reusable templates and produce videos by passing variables
+          into them.
+      - name: Avatar Library
+        description: >-
+          Access a library of stock avatars (and custom avatars on enterprise
+          plans) via stable IDs.
+      - name: Voice Library
+        description: >-
+          Select from supported voices across 140+ languages and locales.
+      - name: Dubbing
+        description: >-
+          Create dubbing projects, add locales, and check status for
+          multi-language video output.
+      - name: Translation and XLIFF
+        description: >-
+          Translate scripts and templates with XLIFF-based localization
+          workflows.
+      - name: Asset Management
+        description: >-
+          Upload and manage media assets used inside generated videos.
+      - name: Webhooks
+        description: >-
+          Subscribe to events such as video.completed to drive downstream
+          workflows.
+      - name: Audit Logs
+        description: >-
+          Query and export audit logs as CSV for compliance and governance.
+    useCases:
+      - name: Corporate Training
+        description: >-
+          Produce and update learning and development videos at scale
+          without re-shoots.
+      - name: Personalized Sales Outreach
+        description: >-
+          Generate personalized prospect videos with dynamic variables.
+      - name: Multilingual Localization
+        description: >-
+          Dub and translate existing video content into dozens of languages.
+      - name: Product Marketing
+        description: >-
+          Spin up product update and announcement videos from templates.
+      - name: Customer Support
+        description: >-
+          Auto-generate explainer and how-to videos for help centers.
+    integrations:
+      - name: Zapier
+      - name: Make
+      - name: Microsoft PowerPoint
+      - name: Articulate Storyline
+      - name: SCORM
+      - name: LMS Platforms
+      - name: Slack
+      - name: Webhooks
+    authentication:
+      - type: API Key
+        description: >-
+          API keys are issued from the Synthesia dashboard and passed in the
+          Authorization header on each request.
+common:
+  - type: Website
+    url: https://www.synthesia.io
+  - type: Documentation
+    url: https://docs.synthesia.io
+  - type: Blog
+    url: https://www.synthesia.io/blog
+  - type: Pricing
+    url: https://www.synthesia.io/pricing
+  - type: TermsOfService
+    url: https://www.synthesia.io/terms-of-service
+  - type: PrivacyPolicy
+    url: https://www.synthesia.io/privacy-policy
+  - type: X
+    url: https://x.com/synthesiaIO
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/synthesia-technologies
+  - type: ChangeLog
+    url: https://docs.synthesia.io/changelog
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
