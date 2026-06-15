@@ -1,0 +1,462 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Synthesia API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Videos",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List videos",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/videos"
+          },
+          "docs": "List videos"
+        },
+        {
+          "info": {
+            "name": "Create a video",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.synthesia.io/v2/videos"
+          },
+          "docs": "Create a video"
+        },
+        {
+          "info": {
+            "name": "Retrieve a video",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/videos/:videoId",
+            "params": [
+              {
+                "name": "videoId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a video"
+        },
+        {
+          "info": {
+            "name": "Update a video",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.synthesia.io/v2/videos/:videoId",
+            "params": [
+              {
+                "name": "videoId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a video"
+        },
+        {
+          "info": {
+            "name": "Delete a video",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.synthesia.io/v2/videos/:videoId",
+            "params": [
+              {
+                "name": "videoId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a video"
+        },
+        {
+          "info": {
+            "name": "Retrieve thumbnail (JPG)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/videos/:videoId/thumbnail",
+            "params": [
+              {
+                "name": "videoId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve thumbnail (JPG)"
+        },
+        {
+          "info": {
+            "name": "Retrieve GIF thumbnail",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/videos/:videoId/thumbnail.gif",
+            "params": [
+              {
+                "name": "videoId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve GIF thumbnail"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Templates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List templates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/templates"
+          },
+          "docs": "List templates"
+        },
+        {
+          "info": {
+            "name": "Retrieve a template",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/templates/:templateId",
+            "params": [
+              {
+                "name": "templateId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a template"
+        },
+        {
+          "info": {
+            "name": "Create video from template",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.synthesia.io/v2/videos/from-template"
+          },
+          "docs": "Create video from template"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Dubbing",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create dubbing project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.synthesia.io/v2/dubbing/projects"
+          },
+          "docs": "Create dubbing project"
+        },
+        {
+          "info": {
+            "name": "Get dubbing project status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/dubbing/projects/:projectId",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get dubbing project status"
+        },
+        {
+          "info": {
+            "name": "Add locales to project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.synthesia.io/v2/dubbing/projects/:projectId/locales",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add locales to project"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Translations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Start or update video translation",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.synthesia.io/v2/translations/:videoId",
+            "params": [
+              {
+                "name": "videoId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Start or update video translation"
+        },
+        {
+          "info": {
+            "name": "Get supported languages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/translations/supported-languages"
+          },
+          "docs": "Get supported languages"
+        },
+        {
+          "info": {
+            "name": "Retrieve XLIFF content",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/videos/:videoId/xliff",
+            "params": [
+              {
+                "name": "videoId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve XLIFF content"
+        },
+        {
+          "info": {
+            "name": "Create video from XLIFF",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.synthesia.io/v2/videos/from-xliff"
+          },
+          "docs": "Create video from XLIFF"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Assets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create media asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.synthesia.io/v2/assets"
+          },
+          "docs": "Create media asset"
+        },
+        {
+          "info": {
+            "name": "Get user media asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/assets/:assetId",
+            "params": [
+              {
+                "name": "assetId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get user media asset"
+        },
+        {
+          "info": {
+            "name": "Upload script audio",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.synthesia.io/v2/assets/script-audio"
+          },
+          "docs": "Upload script audio"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List webhooks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/webhooks"
+          },
+          "docs": "List webhooks"
+        },
+        {
+          "info": {
+            "name": "Create webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.synthesia.io/v2/webhooks"
+          },
+          "docs": "Create webhook"
+        },
+        {
+          "info": {
+            "name": "Retrieve webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/webhooks/:webhookId",
+            "params": [
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve webhook"
+        },
+        {
+          "info": {
+            "name": "Delete webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.synthesia.io/v2/webhooks/:webhookId",
+            "params": [
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete webhook"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "AuditLogs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Query audit log events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/auditLogs/events"
+          },
+          "docs": "Query audit log events"
+        },
+        {
+          "info": {
+            "name": "Advanced search audit logs",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.synthesia.io/v2/auditLogs/events/search"
+          },
+          "docs": "Advanced search audit logs"
+        },
+        {
+          "info": {
+            "name": "Export audit logs as CSV",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/auditLogs/events/export"
+          },
+          "docs": "Export audit logs as CSV"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
