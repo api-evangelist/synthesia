@@ -3,19 +3,12 @@
   "feeds": [
     {
       "source": "https://www.synthesia.io/blog",
-      "feed_url": "https://www.synthesia.io/blog",
-      "title": "",
-      "saved": 0,
-      "method": "none"
-    },
-    {
-      "source": "https://docs.synthesia.io",
-      "feed_url": "https://docs.synthesia.io",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "feed_url": "",
+      "saved": 6,
+      "method": "agent-scrape"
     }
   ],
-  "post_count": 6,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 18,
+  "fetched": "2026-06-27T13:14:46Z",
+  "agent_pulled": "2026-06-27"
 }

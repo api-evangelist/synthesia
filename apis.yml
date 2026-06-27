@@ -54,7 +54,7 @@ apis:
         url: https://docs.synthesia.io/
       - type: GettingStarted
         url: https://docs.synthesia.io/docs/getting-started
-      - type: SignUp
+      - type: Signup
         url: https://www.synthesia.io/signup
       - type: API
         url: https://docs.synthesia.io/reference
