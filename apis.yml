@@ -130,6 +130,10 @@ apis:
           API keys are issued from the Synthesia dashboard and passed in the
           Authorization header on each request.
 common:
+  - type: DomainSecurity
+    url: security/synthesia-domain-security.yml
+  - type: Authentication
+    url: authentication/synthesia-authentication.yml
   - type: Website
     url: https://www.synthesia.io
   - type: Documentation

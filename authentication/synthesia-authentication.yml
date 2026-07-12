@@ -1,0 +1,17 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/synthesia-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: ApiKeyAuth
+  type: apiKey
+  in: header
+  parameter: Authorization
+  description: API key from the Synthesia dashboard, passed in the Authorization header on each
+    request.
+  sources:
+  - openapi/synthesia-openapi.yml
