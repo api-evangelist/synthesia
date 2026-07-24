@@ -1,0 +1,56 @@
+openapi: 3.1.0
+info:
+  title: Synthesia Assets API
+  description: 'The Synthesia REST API enables programmatic creation of AI avatar videos from scripts and templates, with endpoints for videos, templates, dubbing projects, translations, assets, audit logs, and webhooks. Source: https://docs.synthesia.io/reference'
+  version: '2.0'
+  contact:
+    name: Synthesia
+    url: https://docs.synthesia.io/
+servers:
+- url: https://api.synthesia.io/v2
+  description: Production
+security:
+- ApiKeyAuth: []
+tags:
+- name: Assets
+paths:
+  /assets:
+    post:
+      tags:
+      - Assets
+      summary: Create media asset
+      operationId: createAsset
+      responses:
+        '201':
+          description: Created
+  /assets/{assetId}:
+    parameters:
+    - name: assetId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Assets
+      summary: Get user media asset
+      operationId: getAsset
+      responses:
+        '200':
+          description: OK
+  /assets/script-audio:
+    post:
+      tags:
+      - Assets
+      summary: Upload script audio
+      operationId: uploadScriptAudio
+      responses:
+        '201':
+          description: Created
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: API key from the Synthesia dashboard, passed in the Authorization header on each request.

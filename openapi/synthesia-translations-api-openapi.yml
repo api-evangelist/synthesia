@@ -1,0 +1,71 @@
+openapi: 3.1.0
+info:
+  title: Synthesia Assets Translations API
+  description: 'The Synthesia REST API enables programmatic creation of AI avatar videos from scripts and templates, with endpoints for videos, templates, dubbing projects, translations, assets, audit logs, and webhooks. Source: https://docs.synthesia.io/reference'
+  version: '2.0'
+  contact:
+    name: Synthesia
+    url: https://docs.synthesia.io/
+servers:
+- url: https://api.synthesia.io/v2
+  description: Production
+security:
+- ApiKeyAuth: []
+tags:
+- name: Translations
+paths:
+  /translations/{videoId}:
+    parameters:
+    - name: videoId
+      in: path
+      required: true
+      schema:
+        type: string
+    put:
+      tags:
+      - Translations
+      summary: Start or update video translation
+      operationId: upsertTranslation
+      responses:
+        '200':
+          description: OK
+  /translations/supported-languages:
+    get:
+      tags:
+      - Translations
+      summary: Get supported languages
+      operationId: getSupportedLanguages
+      responses:
+        '200':
+          description: OK
+  /videos/{videoId}/xliff:
+    parameters:
+    - name: videoId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Translations
+      summary: Retrieve XLIFF content
+      operationId: getVideoXliff
+      responses:
+        '200':
+          description: OK
+  /videos/from-xliff:
+    post:
+      tags:
+      - Translations
+      summary: Create video from XLIFF
+      operationId: createVideoFromXliff
+      responses:
+        '201':
+          description: Created
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: API key from the Synthesia dashboard, passed in the Authorization header on each request.

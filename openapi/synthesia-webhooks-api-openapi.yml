@@ -1,0 +1,63 @@
+openapi: 3.1.0
+info:
+  title: Synthesia Assets Webhooks API
+  description: 'The Synthesia REST API enables programmatic creation of AI avatar videos from scripts and templates, with endpoints for videos, templates, dubbing projects, translations, assets, audit logs, and webhooks. Source: https://docs.synthesia.io/reference'
+  version: '2.0'
+  contact:
+    name: Synthesia
+    url: https://docs.synthesia.io/
+servers:
+- url: https://api.synthesia.io/v2
+  description: Production
+security:
+- ApiKeyAuth: []
+tags:
+- name: Webhooks
+paths:
+  /webhooks:
+    get:
+      tags:
+      - Webhooks
+      summary: List webhooks
+      operationId: listWebhooks
+      responses:
+        '200':
+          description: OK
+    post:
+      tags:
+      - Webhooks
+      summary: Create webhook
+      operationId: createWebhook
+      responses:
+        '201':
+          description: Created
+  /webhooks/{webhookId}:
+    parameters:
+    - name: webhookId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Webhooks
+      summary: Retrieve webhook
+      operationId: getWebhook
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags:
+      - Webhooks
+      summary: Delete webhook
+      operationId: deleteWebhook
+      responses:
+        '204':
+          description: Deleted
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: API key from the Synthesia dashboard, passed in the Authorization header on each request.

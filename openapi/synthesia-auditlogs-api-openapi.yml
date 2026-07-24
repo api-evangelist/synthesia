@@ -1,0 +1,50 @@
+openapi: 3.1.0
+info:
+  title: Synthesia Assets AuditLogs API
+  description: 'The Synthesia REST API enables programmatic creation of AI avatar videos from scripts and templates, with endpoints for videos, templates, dubbing projects, translations, assets, audit logs, and webhooks. Source: https://docs.synthesia.io/reference'
+  version: '2.0'
+  contact:
+    name: Synthesia
+    url: https://docs.synthesia.io/
+servers:
+- url: https://api.synthesia.io/v2
+  description: Production
+security:
+- ApiKeyAuth: []
+tags:
+- name: AuditLogs
+paths:
+  /auditLogs/events:
+    get:
+      tags:
+      - AuditLogs
+      summary: Query audit log events
+      operationId: queryAuditLogEvents
+      responses:
+        '200':
+          description: OK
+  /auditLogs/events/search:
+    post:
+      tags:
+      - AuditLogs
+      summary: Advanced search audit logs
+      operationId: searchAuditLogEvents
+      responses:
+        '200':
+          description: OK
+  /auditLogs/events/export:
+    get:
+      tags:
+      - AuditLogs
+      summary: Export audit logs as CSV
+      operationId: exportAuditLogEvents
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: API key from the Synthesia dashboard, passed in the Authorization header on each request.

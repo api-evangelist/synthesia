@@ -1,0 +1,56 @@
+openapi: 3.1.0
+info:
+  title: Synthesia Assets Templates API
+  description: 'The Synthesia REST API enables programmatic creation of AI avatar videos from scripts and templates, with endpoints for videos, templates, dubbing projects, translations, assets, audit logs, and webhooks. Source: https://docs.synthesia.io/reference'
+  version: '2.0'
+  contact:
+    name: Synthesia
+    url: https://docs.synthesia.io/
+servers:
+- url: https://api.synthesia.io/v2
+  description: Production
+security:
+- ApiKeyAuth: []
+tags:
+- name: Templates
+paths:
+  /templates:
+    get:
+      tags:
+      - Templates
+      summary: List templates
+      operationId: listTemplates
+      responses:
+        '200':
+          description: OK
+  /templates/{templateId}:
+    parameters:
+    - name: templateId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Templates
+      summary: Retrieve a template
+      operationId: getTemplate
+      responses:
+        '200':
+          description: OK
+  /videos/from-template:
+    post:
+      tags:
+      - Templates
+      summary: Create video from template
+      operationId: createVideoFromTemplate
+      responses:
+        '201':
+          description: Created
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: API key from the Synthesia dashboard, passed in the Authorization header on each request.

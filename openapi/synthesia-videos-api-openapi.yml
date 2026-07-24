@@ -1,0 +1,110 @@
+openapi: 3.1.0
+info:
+  title: Synthesia Assets Videos API
+  description: 'The Synthesia REST API enables programmatic creation of AI avatar videos from scripts and templates, with endpoints for videos, templates, dubbing projects, translations, assets, audit logs, and webhooks. Source: https://docs.synthesia.io/reference'
+  version: '2.0'
+  contact:
+    name: Synthesia
+    url: https://docs.synthesia.io/
+servers:
+- url: https://api.synthesia.io/v2
+  description: Production
+security:
+- ApiKeyAuth: []
+tags:
+- name: Videos
+paths:
+  /videos:
+    get:
+      tags:
+      - Videos
+      summary: List videos
+      operationId: listVideos
+      responses:
+        '200':
+          description: OK
+    post:
+      tags:
+      - Videos
+      summary: Create a video
+      operationId: createVideo
+      responses:
+        '201':
+          description: Created
+  /videos/{videoId}:
+    parameters:
+    - name: videoId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Videos
+      summary: Retrieve a video
+      operationId: getVideo
+      responses:
+        '200':
+          description: OK
+    patch:
+      tags:
+      - Videos
+      summary: Update a video
+      operationId: updateVideo
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags:
+      - Videos
+      summary: Delete a video
+      operationId: deleteVideo
+      responses:
+        '204':
+          description: Deleted
+  /videos/{videoId}/thumbnail:
+    parameters:
+    - name: videoId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Videos
+      summary: Retrieve thumbnail (JPG)
+      operationId: getVideoThumbnail
+      responses:
+        '200':
+          description: OK
+  /videos/{videoId}/thumbnail.gif:
+    parameters:
+    - name: videoId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Videos
+      summary: Retrieve GIF thumbnail
+      operationId: getVideoThumbnailGif
+      responses:
+        '200':
+          description: OK
+  /videos/from-template:
+    post:
+      tags:
+      - Videos
+      summary: Create video from template
+      operationId: createVideoFromTemplate
+      responses:
+        '201':
+          description: Created
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: API key from the Synthesia dashboard, passed in the Authorization header on each request.
