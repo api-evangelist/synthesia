@@ -12,9 +12,22 @@ description: >-
   and dub videos at scale and embed video generation into their own
   applications.
 type: Index
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Provider
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/synthesia.png
 tags:
   - Artificial Intelligence
   - Generative AI
@@ -32,103 +45,160 @@ created: '2026-05-23'
 modified: '2026-05-23'
 specificationVersion: '0.20'
 apis:
-  - aid: synthesia:synthesia-api
-    name: Synthesia API
-    description: >-
-      The Synthesia REST API enables programmatic creation of avatar videos
-      from scripts and templates, with endpoints for videos, templates,
-      avatars, voices, assets, dubbing projects, translations, audit logs,
-      and webhooks. It is designed for high-volume, personalized, and
-      multilingual video production workflows.
-    humanURL: https://docs.synthesia.io/
-    baseURL: https://api.synthesia.io/v2
-    tags:
-      - Video
-      - Avatars
-      - Templates
-      - Dubbing
-      - Translation
-      - Webhooks
-    properties:
-      - type: Documentation
-        url: https://docs.synthesia.io/
-      - type: GettingStarted
-        url: https://docs.synthesia.io/docs/getting-started
-      - type: Signup
-        url: https://www.synthesia.io/signup
-      - type: API
-        url: https://docs.synthesia.io/reference
-      - type: OpenAPI
-        url: https://docs.synthesia.io/llms.txt
-      - type: Pricing
-        url: https://www.synthesia.io/pricing
-      - type: Authentication
-        url: https://docs.synthesia.io/reference/authentication
-    features:
-      - name: Video Creation
-        description: >-
-          Generate avatar videos from scripts with configurable backgrounds,
-          layouts, and avatars.
-      - name: Templates
-        description: >-
-          Create reusable templates and produce videos by passing variables
-          into them.
-      - name: Avatar Library
-        description: >-
-          Access a library of stock avatars (and custom avatars on enterprise
-          plans) via stable IDs.
-      - name: Voice Library
-        description: >-
-          Select from supported voices across 140+ languages and locales.
-      - name: Dubbing
-        description: >-
-          Create dubbing projects, add locales, and check status for
-          multi-language video output.
-      - name: Translation and XLIFF
-        description: >-
-          Translate scripts and templates with XLIFF-based localization
-          workflows.
-      - name: Asset Management
-        description: >-
-          Upload and manage media assets used inside generated videos.
-      - name: Webhooks
-        description: >-
-          Subscribe to events such as video.completed to drive downstream
-          workflows.
-      - name: Audit Logs
-        description: >-
-          Query and export audit logs as CSV for compliance and governance.
-    useCases:
-      - name: Corporate Training
-        description: >-
-          Produce and update learning and development videos at scale
-          without re-shoots.
-      - name: Personalized Sales Outreach
-        description: >-
-          Generate personalized prospect videos with dynamic variables.
-      - name: Multilingual Localization
-        description: >-
-          Dub and translate existing video content into dozens of languages.
-      - name: Product Marketing
-        description: >-
-          Spin up product update and announcement videos from templates.
-      - name: Customer Support
-        description: >-
-          Auto-generate explainer and how-to videos for help centers.
-    integrations:
-      - name: Zapier
-      - name: Make
-      - name: Microsoft PowerPoint
-      - name: Articulate Storyline
-      - name: SCORM
-      - name: LMS Platforms
-      - name: Slack
-      - name: Webhooks
-    authentication:
-      - type: API Key
-        description: >-
-          API keys are issued from the Synthesia dashboard and passed in the
-          Authorization header on each request.
+- aid: synthesia:synthesia-assets-api
+  name: Synthesia Assets API
+  description: The Assets API from Synthesia — 3 operation(s) for assets.
+  humanURL: https://docs.synthesia.io/
+  baseURL: https://api.synthesia.io/v2
+  tags:
+  - Assets
+  properties:
+  - type: OpenAPI
+    url: openapi/synthesia-assets-api-openapi.yml
+  - type: Documentation
+    url: https://docs.synthesia.io/
+  - type: GettingStarted
+    url: https://docs.synthesia.io/docs/getting-started
+  - type: Signup
+    url: https://www.synthesia.io/signup
+  - type: API
+    url: https://docs.synthesia.io/reference
+  - type: Pricing
+    url: https://www.synthesia.io/pricing
+  - type: Authentication
+    url: https://docs.synthesia.io/reference/authentication
+- aid: synthesia:synthesia-auditlogs-api
+  name: Synthesia AuditLogs API
+  description: The AuditLogs API from Synthesia — 3 operation(s) for auditlogs.
+  humanURL: https://docs.synthesia.io/
+  baseURL: https://api.synthesia.io/v2
+  tags:
+  - AuditLogs
+  properties:
+  - type: OpenAPI
+    url: openapi/synthesia-auditlogs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.synthesia.io/
+  - type: GettingStarted
+    url: https://docs.synthesia.io/docs/getting-started
+  - type: Signup
+    url: https://www.synthesia.io/signup
+  - type: API
+    url: https://docs.synthesia.io/reference
+  - type: Pricing
+    url: https://www.synthesia.io/pricing
+  - type: Authentication
+    url: https://docs.synthesia.io/reference/authentication
+- aid: synthesia:synthesia-dubbing-api
+  name: Synthesia Dubbing API
+  description: The Dubbing API from Synthesia — 3 operation(s) for dubbing.
+  humanURL: https://docs.synthesia.io/
+  baseURL: https://api.synthesia.io/v2
+  tags:
+  - Dubbing
+  properties:
+  - type: OpenAPI
+    url: openapi/synthesia-dubbing-api-openapi.yml
+  - type: Documentation
+    url: https://docs.synthesia.io/
+  - type: GettingStarted
+    url: https://docs.synthesia.io/docs/getting-started
+  - type: Signup
+    url: https://www.synthesia.io/signup
+  - type: API
+    url: https://docs.synthesia.io/reference
+  - type: Pricing
+    url: https://www.synthesia.io/pricing
+  - type: Authentication
+    url: https://docs.synthesia.io/reference/authentication
+- aid: synthesia:synthesia-templates-api
+  name: Synthesia Templates API
+  description: The Templates API from Synthesia — 3 operation(s) for templates.
+  humanURL: https://docs.synthesia.io/
+  baseURL: https://api.synthesia.io/v2
+  tags:
+  - Templates
+  properties:
+  - type: OpenAPI
+    url: openapi/synthesia-templates-api-openapi.yml
+  - type: Documentation
+    url: https://docs.synthesia.io/
+  - type: GettingStarted
+    url: https://docs.synthesia.io/docs/getting-started
+  - type: Signup
+    url: https://www.synthesia.io/signup
+  - type: API
+    url: https://docs.synthesia.io/reference
+  - type: Pricing
+    url: https://www.synthesia.io/pricing
+  - type: Authentication
+    url: https://docs.synthesia.io/reference/authentication
+- aid: synthesia:synthesia-translations-api
+  name: Synthesia Translations API
+  description: The Translations API from Synthesia — 4 operation(s) for translations.
+  humanURL: https://docs.synthesia.io/
+  baseURL: https://api.synthesia.io/v2
+  tags:
+  - Translations
+  properties:
+  - type: OpenAPI
+    url: openapi/synthesia-translations-api-openapi.yml
+  - type: Documentation
+    url: https://docs.synthesia.io/
+  - type: GettingStarted
+    url: https://docs.synthesia.io/docs/getting-started
+  - type: Signup
+    url: https://www.synthesia.io/signup
+  - type: API
+    url: https://docs.synthesia.io/reference
+  - type: Pricing
+    url: https://www.synthesia.io/pricing
+  - type: Authentication
+    url: https://docs.synthesia.io/reference/authentication
+- aid: synthesia:synthesia-videos-api
+  name: Synthesia Videos API
+  description: The Videos API from Synthesia — 5 operation(s) for videos.
+  humanURL: https://docs.synthesia.io/
+  baseURL: https://api.synthesia.io/v2
+  tags:
+  - Videos
+  properties:
+  - type: OpenAPI
+    url: openapi/synthesia-videos-api-openapi.yml
+  - type: Documentation
+    url: https://docs.synthesia.io/
+  - type: GettingStarted
+    url: https://docs.synthesia.io/docs/getting-started
+  - type: Signup
+    url: https://www.synthesia.io/signup
+  - type: API
+    url: https://docs.synthesia.io/reference
+  - type: Pricing
+    url: https://www.synthesia.io/pricing
+  - type: Authentication
+    url: https://docs.synthesia.io/reference/authentication
+- aid: synthesia:synthesia-webhooks-api
+  name: Synthesia Webhooks API
+  description: The Webhooks API from Synthesia — 2 operation(s) for webhooks.
+  humanURL: https://docs.synthesia.io/
+  baseURL: https://api.synthesia.io/v2
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/synthesia-webhooks-api-openapi.yml
+  - type: Documentation
+    url: https://docs.synthesia.io/
+  - type: GettingStarted
+    url: https://docs.synthesia.io/docs/getting-started
+  - type: Signup
+    url: https://www.synthesia.io/signup
+  - type: API
+    url: https://docs.synthesia.io/reference
+  - type: Pricing
+    url: https://www.synthesia.io/pricing
+  - type: Authentication
+    url: https://docs.synthesia.io/reference/authentication
 common:
   - type: AgenticAccess
     url: agentic-access/synthesia-agentic-access.yml
