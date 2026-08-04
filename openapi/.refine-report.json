@@ -1,0 +1,26 @@
+{
+  "provider": "synthesia",
+  "sources": [
+    "synthesia-assets-api-openapi.yml",
+    "synthesia-auditlogs-api-openapi.yml",
+    "synthesia-dubbing-api-openapi.yml",
+    "synthesia-templates-api-openapi.yml",
+    "synthesia-translations-api-openapi.yml",
+    "synthesia-videos-api-openapi.yml",
+    "synthesia-webhooks-api-openapi.yml"
+  ],
+  "outputs": [
+    "synthesia-assets-api-openapi.yml",
+    "synthesia-auditlogs-api-openapi.yml",
+    "synthesia-dubbing-api-openapi.yml",
+    "synthesia-templates-api-openapi.yml",
+    "synthesia-translations-api-openapi.yml",
+    "synthesia-videos-api-openapi.yml",
+    "synthesia-webhooks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

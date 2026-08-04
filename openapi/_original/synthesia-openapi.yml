@@ -1,0 +1,306 @@
+openapi: 3.1.0
+info:
+  title: Synthesia API
+  description: >-
+    The Synthesia REST API enables programmatic creation of AI avatar videos
+    from scripts and templates, with endpoints for videos, templates, dubbing
+    projects, translations, assets, audit logs, and webhooks. Source:
+    https://docs.synthesia.io/reference
+  version: "2.0"
+  contact:
+    name: Synthesia
+    url: https://docs.synthesia.io/
+servers:
+  - url: https://api.synthesia.io/v2
+    description: Production
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: Videos
+  - name: Templates
+  - name: Dubbing
+  - name: Translations
+  - name: Assets
+  - name: Webhooks
+  - name: AuditLogs
+paths:
+  /videos:
+    get:
+      tags: [Videos]
+      summary: List videos
+      operationId: listVideos
+      responses:
+        "200":
+          description: OK
+    post:
+      tags: [Videos]
+      summary: Create a video
+      operationId: createVideo
+      responses:
+        "201":
+          description: Created
+  /videos/{videoId}:
+    parameters:
+      - name: videoId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Videos]
+      summary: Retrieve a video
+      operationId: getVideo
+      responses:
+        "200":
+          description: OK
+    patch:
+      tags: [Videos]
+      summary: Update a video
+      operationId: updateVideo
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [Videos]
+      summary: Delete a video
+      operationId: deleteVideo
+      responses:
+        "204":
+          description: Deleted
+  /videos/{videoId}/thumbnail:
+    parameters:
+      - name: videoId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Videos]
+      summary: Retrieve thumbnail (JPG)
+      operationId: getVideoThumbnail
+      responses:
+        "200":
+          description: OK
+  /videos/{videoId}/thumbnail.gif:
+    parameters:
+      - name: videoId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Videos]
+      summary: Retrieve GIF thumbnail
+      operationId: getVideoThumbnailGif
+      responses:
+        "200":
+          description: OK
+  /templates:
+    get:
+      tags: [Templates]
+      summary: List templates
+      operationId: listTemplates
+      responses:
+        "200":
+          description: OK
+  /templates/{templateId}:
+    parameters:
+      - name: templateId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Templates]
+      summary: Retrieve a template
+      operationId: getTemplate
+      responses:
+        "200":
+          description: OK
+  /videos/from-template:
+    post:
+      tags: [Templates, Videos]
+      summary: Create video from template
+      operationId: createVideoFromTemplate
+      responses:
+        "201":
+          description: Created
+  /dubbing/projects:
+    post:
+      tags: [Dubbing]
+      summary: Create dubbing project
+      operationId: createDubbingProject
+      responses:
+        "201":
+          description: Created
+  /dubbing/projects/{projectId}:
+    parameters:
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Dubbing]
+      summary: Get dubbing project status
+      operationId: getDubbingProject
+      responses:
+        "200":
+          description: OK
+  /dubbing/projects/{projectId}/locales:
+    parameters:
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      tags: [Dubbing]
+      summary: Add locales to project
+      operationId: addDubbingLocales
+      responses:
+        "200":
+          description: OK
+  /translations/{videoId}:
+    parameters:
+      - name: videoId
+        in: path
+        required: true
+        schema:
+          type: string
+    put:
+      tags: [Translations]
+      summary: Start or update video translation
+      operationId: upsertTranslation
+      responses:
+        "200":
+          description: OK
+  /translations/supported-languages:
+    get:
+      tags: [Translations]
+      summary: Get supported languages
+      operationId: getSupportedLanguages
+      responses:
+        "200":
+          description: OK
+  /videos/{videoId}/xliff:
+    parameters:
+      - name: videoId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Translations]
+      summary: Retrieve XLIFF content
+      operationId: getVideoXliff
+      responses:
+        "200":
+          description: OK
+  /videos/from-xliff:
+    post:
+      tags: [Translations]
+      summary: Create video from XLIFF
+      operationId: createVideoFromXliff
+      responses:
+        "201":
+          description: Created
+  /assets:
+    post:
+      tags: [Assets]
+      summary: Create media asset
+      operationId: createAsset
+      responses:
+        "201":
+          description: Created
+  /assets/{assetId}:
+    parameters:
+      - name: assetId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Assets]
+      summary: Get user media asset
+      operationId: getAsset
+      responses:
+        "200":
+          description: OK
+  /assets/script-audio:
+    post:
+      tags: [Assets]
+      summary: Upload script audio
+      operationId: uploadScriptAudio
+      responses:
+        "201":
+          description: Created
+  /webhooks:
+    get:
+      tags: [Webhooks]
+      summary: List webhooks
+      operationId: listWebhooks
+      responses:
+        "200":
+          description: OK
+    post:
+      tags: [Webhooks]
+      summary: Create webhook
+      operationId: createWebhook
+      responses:
+        "201":
+          description: Created
+  /webhooks/{webhookId}:
+    parameters:
+      - name: webhookId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Webhooks]
+      summary: Retrieve webhook
+      operationId: getWebhook
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [Webhooks]
+      summary: Delete webhook
+      operationId: deleteWebhook
+      responses:
+        "204":
+          description: Deleted
+  /auditLogs/events:
+    get:
+      tags: [AuditLogs]
+      summary: Query audit log events
+      operationId: queryAuditLogEvents
+      responses:
+        "200":
+          description: OK
+  /auditLogs/events/search:
+    post:
+      tags: [AuditLogs]
+      summary: Advanced search audit logs
+      operationId: searchAuditLogEvents
+      responses:
+        "200":
+          description: OK
+  /auditLogs/events/export:
+    get:
+      tags: [AuditLogs]
+      summary: Export audit logs as CSV
+      operationId: exportAuditLogEvents
+      responses:
+        "200":
+          description: OK
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: >-
+        API key from the Synthesia dashboard, passed in the Authorization
+        header on each request.
