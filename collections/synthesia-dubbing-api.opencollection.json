@@ -1,0 +1,73 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Synthesia Assets Dubbing API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Dubbing",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create dubbing project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.synthesia.io/v2/dubbing/projects"
+          },
+          "docs": "Create dubbing project"
+        },
+        {
+          "info": {
+            "name": "Get dubbing project status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/dubbing/projects/:projectId",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get dubbing project status"
+        },
+        {
+          "info": {
+            "name": "Add locales to project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.synthesia.io/v2/dubbing/projects/:projectId/locales",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add locales to project"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

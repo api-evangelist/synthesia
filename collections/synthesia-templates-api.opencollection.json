@@ -1,0 +1,66 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Synthesia Assets Templates API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Templates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List templates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/templates"
+          },
+          "docs": "List templates"
+        },
+        {
+          "info": {
+            "name": "Retrieve a template",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/templates/:templateId",
+            "params": [
+              {
+                "name": "templateId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a template"
+        },
+        {
+          "info": {
+            "name": "Create video from template",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.synthesia.io/v2/videos/from-template"
+          },
+          "docs": "Create video from template"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

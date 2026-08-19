@@ -1,0 +1,149 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Synthesia Assets Videos API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Videos",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List videos",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/videos"
+          },
+          "docs": "List videos"
+        },
+        {
+          "info": {
+            "name": "Create a video",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.synthesia.io/v2/videos"
+          },
+          "docs": "Create a video"
+        },
+        {
+          "info": {
+            "name": "Retrieve a video",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/videos/:videoId",
+            "params": [
+              {
+                "name": "videoId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a video"
+        },
+        {
+          "info": {
+            "name": "Update a video",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.synthesia.io/v2/videos/:videoId",
+            "params": [
+              {
+                "name": "videoId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a video"
+        },
+        {
+          "info": {
+            "name": "Delete a video",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.synthesia.io/v2/videos/:videoId",
+            "params": [
+              {
+                "name": "videoId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a video"
+        },
+        {
+          "info": {
+            "name": "Retrieve thumbnail (JPG)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/videos/:videoId/thumbnail",
+            "params": [
+              {
+                "name": "videoId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve thumbnail (JPG)"
+        },
+        {
+          "info": {
+            "name": "Retrieve GIF thumbnail",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/videos/:videoId/thumbnail.gif",
+            "params": [
+              {
+                "name": "videoId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve GIF thumbnail"
+        },
+        {
+          "info": {
+            "name": "Create video from template",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.synthesia.io/v2/videos/from-template"
+          },
+          "docs": "Create video from template"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

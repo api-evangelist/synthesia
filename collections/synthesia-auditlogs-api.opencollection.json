@@ -1,0 +1,59 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Synthesia Assets AuditLogs API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "AuditLogs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Query audit log events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/auditLogs/events"
+          },
+          "docs": "Query audit log events"
+        },
+        {
+          "info": {
+            "name": "Advanced search audit logs",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.synthesia.io/v2/auditLogs/events/search"
+          },
+          "docs": "Advanced search audit logs"
+        },
+        {
+          "info": {
+            "name": "Export audit logs as CSV",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthesia.io/v2/auditLogs/events/export"
+          },
+          "docs": "Export audit logs as CSV"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
