@@ -33,6 +33,18 @@ tags:
   - Generative AI
   - Video
   - Avatars
+  - Text-to-Video
+  - Voices
+  - Dubbing
+  - Translation
+  - Templates
+  - Enterprise
+  - Learning
+tags_raw:
+  - Artificial Intelligence
+  - Generative AI
+  - Video
+  - Avatars
   - Text To Video
   - Voices
   - Dubbing
@@ -73,6 +85,8 @@ apis:
   humanURL: https://docs.synthesia.io/
   baseURL: https://api.synthesia.io/v2
   tags:
+  - Audit Logs
+  tags_raw:
   - AuditLogs
   properties:
   - type: OpenAPI
@@ -183,6 +197,8 @@ apis:
   humanURL: https://docs.synthesia.io/
   baseURL: https://api.synthesia.io/v2
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
