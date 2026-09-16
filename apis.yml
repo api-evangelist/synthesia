@@ -92,30 +92,6 @@ apis:
     url: https://www.synthesia.io/pricing
   - type: Authentication
     url: https://docs.synthesia.io/reference/authentication
-- aid: synthesia:synthesia-auditlogs-api
-  name: Synthesia AuditLogs API
-  description: The AuditLogs API from Synthesia — 3 operation(s) for auditlogs.
-  humanURL: https://docs.synthesia.io/
-  baseURL: https://api.synthesia.io/v2
-  tags:
-  - Audit Logs
-  tags_raw:
-  - AuditLogs
-  properties:
-  - type: OpenAPI
-    url: openapi/synthesia-auditlogs-api-openapi.yml
-  - type: Documentation
-    url: https://docs.synthesia.io/
-  - type: GettingStarted
-    url: https://docs.synthesia.io/docs/getting-started
-  - type: Signup
-    url: https://www.synthesia.io/signup
-  - type: API
-    url: https://docs.synthesia.io/reference
-  - type: Pricing
-    url: https://www.synthesia.io/pricing
-  - type: Authentication
-    url: https://docs.synthesia.io/reference/authentication
 - aid: synthesia:synthesia-dubbing-api
   name: Synthesia Dubbing API
   description: The Dubbing API from Synthesia — 3 operation(s) for dubbing.
@@ -216,6 +192,28 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/synthesia-webhooks-api-openapi.yml
+  - type: Documentation
+    url: https://docs.synthesia.io/
+  - type: GettingStarted
+    url: https://docs.synthesia.io/docs/getting-started
+  - type: Signup
+    url: https://www.synthesia.io/signup
+  - type: API
+    url: https://docs.synthesia.io/reference
+  - type: Pricing
+    url: https://www.synthesia.io/pricing
+  - type: Authentication
+    url: https://docs.synthesia.io/reference/authentication
+- aid: synthesia:synthesia-audit-logs-api
+  name: Synthesia Audit Logs API
+  description: The Audit Logs API from Synthesia — 3 operation(s) for audit logs.
+  humanURL: https://docs.synthesia.io/
+  baseURL: https://api.synthesia.io/v2
+  tags:
+  - Audit Logs
+  properties:
+  - type: OpenAPI
+    url: openapi/synthesia-audit-logs-api-openapi.yml
   - type: Documentation
     url: https://docs.synthesia.io/
   - type: GettingStarted
