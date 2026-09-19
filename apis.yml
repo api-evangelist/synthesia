@@ -47,7 +47,7 @@ tags:
   - Video
   - Avatars
   - Text-to-Video
-  - Voices
+  - Voice
   - Dubbing
   - Translation
   - Templates
@@ -142,6 +142,8 @@ apis:
   humanURL: https://docs.synthesia.io/
   baseURL: https://api.synthesia.io/v2
   tags:
+  - Translation
+  tags_raw:
   - Translations
   properties:
   - type: OpenAPI
@@ -164,6 +166,8 @@ apis:
   humanURL: https://docs.synthesia.io/
   baseURL: https://api.synthesia.io/v2
   tags:
+  - Video
+  tags_raw:
   - Videos
   properties:
   - type: OpenAPI
