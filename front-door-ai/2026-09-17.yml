@@ -1,0 +1,30 @@
+# Front Door AI Index — synthesia — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: synthesia
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.synthesia.io
+  final_host: www.synthesia.io
+  ownership: own
+  owner: synthesia
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 52
+  host_score: 52
+  density: 33.96
+  words: 1531
+  tiers:
+    agentic: 1
+    core: 49
+    model: 2
+  ambiguous: 1
+  top_terms:
+    AI: 48
+    ChatGPT: 1
+    Gemini: 1
+    artificial intelligence: 1
+    chatbot: 1
+    intelligence: 1
