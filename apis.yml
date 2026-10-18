@@ -46,7 +46,7 @@ tags:
   - Generative AI
   - Video
   - Avatars
-  - Text-to-Video
+  - Video Generation
   - Voice
   - Dubbing
   - Translation
@@ -65,6 +65,7 @@ tags_raw:
   - Templates
   - Enterprise
   - Learning
+  - Text-to-Video
 url: https://raw.githubusercontent.com/api-evangelist/synthesia/refs/heads/main/apis.yml
 created: '2026-05-23'
 modified: '2026-05-23'
